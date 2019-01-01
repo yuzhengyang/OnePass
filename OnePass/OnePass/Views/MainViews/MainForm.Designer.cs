@@ -29,53 +29,75 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MSMain = new System.Windows.Forms.MenuStrip();
+            this.SsMain = new System.Windows.Forms.StatusStrip();
+            this.CmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MsMain = new System.Windows.Forms.MenuStrip();
             this.开始ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.发送反馈ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.技术支持ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.隐私声明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.关于OnePassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PNMain = new System.Windows.Forms.Panel();
             this.PNDetail = new System.Windows.Forms.Panel();
             this.PNItem = new System.Windows.Forms.Panel();
             this.PNType = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.发送反馈ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.技术支持ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.隐私声明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.关于OnePassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MSMain.SuspendLayout();
+            this.NiMain = new System.Windows.Forms.NotifyIcon(this.components);
+            this.打开主界面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.锁定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.切换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.备份ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.CmsMain.SuspendLayout();
+            this.MsMain.SuspendLayout();
             this.PNMain.SuspendLayout();
             this.PNType.SuspendLayout();
             this.SuspendLayout();
             // 
-            // statusStrip1
+            // SsMain
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 375);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(704, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
+            this.SsMain.Location = new System.Drawing.Point(0, 375);
+            this.SsMain.Name = "SsMain";
+            this.SsMain.Size = new System.Drawing.Size(704, 22);
+            this.SsMain.TabIndex = 0;
+            this.SsMain.Text = "statusStrip1";
             // 
-            // contextMenuStrip1
+            // CmsMain
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.CmsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.打开主界面ToolStripMenuItem,
+            this.锁定ToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.退出ToolStripMenuItem});
+            this.CmsMain.Name = "contextMenuStrip1";
+            this.CmsMain.Size = new System.Drawing.Size(113, 76);
             // 
-            // MSMain
+            // MsMain
             // 
-            this.MSMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.开始ToolStripMenuItem,
+            this.工具ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
-            this.MSMain.Location = new System.Drawing.Point(0, 0);
-            this.MSMain.Name = "MSMain";
-            this.MSMain.Size = new System.Drawing.Size(704, 25);
-            this.MSMain.TabIndex = 2;
-            this.MSMain.Text = "menuStrip1";
+            this.MsMain.Location = new System.Drawing.Point(0, 0);
+            this.MsMain.Name = "MsMain";
+            this.MsMain.Size = new System.Drawing.Size(704, 25);
+            this.MsMain.TabIndex = 2;
+            this.MsMain.Text = "menuStrip1";
             // 
             // 开始ToolStripMenuItem
             // 
+            this.开始ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.登录ToolStripMenuItem,
+            this.切换ToolStripMenuItem,
+            this.备份ToolStripMenuItem,
+            this.退出ToolStripMenuItem1});
             this.开始ToolStripMenuItem.Name = "开始ToolStripMenuItem";
             this.开始ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.开始ToolStripMenuItem.Text = "开始";
@@ -92,6 +114,40 @@
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
+            // 
+            // 发送反馈ToolStripMenuItem
+            // 
+            this.发送反馈ToolStripMenuItem.Name = "发送反馈ToolStripMenuItem";
+            this.发送反馈ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.发送反馈ToolStripMenuItem.Text = "发送反馈";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
+            // 
+            // 技术支持ToolStripMenuItem
+            // 
+            this.技术支持ToolStripMenuItem.Name = "技术支持ToolStripMenuItem";
+            this.技术支持ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.技术支持ToolStripMenuItem.Text = "技术支持";
+            // 
+            // 隐私声明ToolStripMenuItem
+            // 
+            this.隐私声明ToolStripMenuItem.Name = "隐私声明ToolStripMenuItem";
+            this.隐私声明ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.隐私声明ToolStripMenuItem.Text = "隐私声明";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(151, 6);
+            // 
+            // 关于OnePassToolStripMenuItem
+            // 
+            this.关于OnePassToolStripMenuItem.Name = "关于OnePassToolStripMenuItem";
+            this.关于OnePassToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.关于OnePassToolStripMenuItem.Text = "关于 OnePass";
             // 
             // PNMain
             // 
@@ -142,39 +198,64 @@
             this.label1.Text = "全部";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // 发送反馈ToolStripMenuItem
+            // NiMain
             // 
-            this.发送反馈ToolStripMenuItem.Name = "发送反馈ToolStripMenuItem";
-            this.发送反馈ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.发送反馈ToolStripMenuItem.Text = "发送反馈";
+            this.NiMain.ContextMenuStrip = this.CmsMain;
+            this.NiMain.Text = "notifyIcon1";
+            this.NiMain.Visible = true;
             // 
-            // 技术支持ToolStripMenuItem
+            // 打开主界面ToolStripMenuItem
             // 
-            this.技术支持ToolStripMenuItem.Name = "技术支持ToolStripMenuItem";
-            this.技术支持ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.技术支持ToolStripMenuItem.Text = "技术支持";
+            this.打开主界面ToolStripMenuItem.Name = "打开主界面ToolStripMenuItem";
+            this.打开主界面ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.打开主界面ToolStripMenuItem.Text = "主界面";
             // 
-            // toolStripSeparator1
+            // 锁定ToolStripMenuItem
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
+            this.锁定ToolStripMenuItem.Name = "锁定ToolStripMenuItem";
+            this.锁定ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.锁定ToolStripMenuItem.Text = "锁定";
             // 
-            // 隐私声明ToolStripMenuItem
+            // 退出ToolStripMenuItem
             // 
-            this.隐私声明ToolStripMenuItem.Name = "隐私声明ToolStripMenuItem";
-            this.隐私声明ToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.隐私声明ToolStripMenuItem.Text = "隐私声明";
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.退出ToolStripMenuItem.Text = "退出";
             // 
-            // toolStripSeparator2
+            // toolStripSeparator3
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(151, 6);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(109, 6);
             // 
-            // 关于OnePassToolStripMenuItem
+            // 工具ToolStripMenuItem
             // 
-            this.关于OnePassToolStripMenuItem.Name = "关于OnePassToolStripMenuItem";
-            this.关于OnePassToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.关于OnePassToolStripMenuItem.Text = "关于 OnePass";
+            this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
+            this.工具ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.工具ToolStripMenuItem.Text = "工具";
+            // 
+            // 登录ToolStripMenuItem
+            // 
+            this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
+            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.登录ToolStripMenuItem.Text = "登录";
+            // 
+            // 切换ToolStripMenuItem
+            // 
+            this.切换ToolStripMenuItem.Name = "切换ToolStripMenuItem";
+            this.切换ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.切换ToolStripMenuItem.Text = "切换";
+            // 
+            // 备份ToolStripMenuItem
+            // 
+            this.备份ToolStripMenuItem.Name = "备份ToolStripMenuItem";
+            this.备份ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.备份ToolStripMenuItem.Text = "备份";
+            // 
+            // 退出ToolStripMenuItem1
+            // 
+            this.退出ToolStripMenuItem1.Name = "退出ToolStripMenuItem1";
+            this.退出ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.退出ToolStripMenuItem1.Text = "退出";
             // 
             // MainForm
             // 
@@ -182,17 +263,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 397);
             this.Controls.Add(this.PNMain);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.MSMain);
+            this.Controls.Add(this.SsMain);
+            this.Controls.Add(this.MsMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.MSMain;
+            this.MainMenuStrip = this.MsMain;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OnePass";
-            this.MSMain.ResumeLayout(false);
-            this.MSMain.PerformLayout();
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.CmsMain.ResumeLayout(false);
+            this.MsMain.ResumeLayout(false);
+            this.MsMain.PerformLayout();
             this.PNMain.ResumeLayout(false);
             this.PNType.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -202,9 +285,9 @@
 
         #endregion
 
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.MenuStrip MSMain;
+        private System.Windows.Forms.StatusStrip SsMain;
+        private System.Windows.Forms.ContextMenuStrip CmsMain;
+        private System.Windows.Forms.MenuStrip MsMain;
         private System.Windows.Forms.ToolStripMenuItem 开始ToolStripMenuItem;
         private System.Windows.Forms.Panel PNMain;
         private System.Windows.Forms.Panel PNDetail;
@@ -218,5 +301,15 @@
         private System.Windows.Forms.ToolStripMenuItem 隐私声明ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem 关于OnePassToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon NiMain;
+        private System.Windows.Forms.ToolStripMenuItem 打开主界面ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 锁定ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 登录ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 切换ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 备份ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
     }
 }
