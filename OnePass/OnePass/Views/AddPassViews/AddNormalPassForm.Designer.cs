@@ -51,6 +51,7 @@
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "button1";
             this.BtnSave.UseVisualStyleBackColor = true;
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // TbxAccount
             // 

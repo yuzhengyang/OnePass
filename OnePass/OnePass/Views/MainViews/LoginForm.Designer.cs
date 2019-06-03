@@ -88,6 +88,7 @@
             this.BtnConfirm.TabIndex = 6;
             this.BtnConfirm.Text = "确定";
             this.BtnConfirm.UseVisualStyleBackColor = true;
+            this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
             // LoginForm
             // 

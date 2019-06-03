@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnePass", "OnePass\OnePass.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnePass.Models", "OnePass.Models\OnePass.Models.csproj", "{344D7B76-7B66-437C-BF37-50A952323D62}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "模型", "模型", "{C1698DDC-827B-4CCB-882B-DB76A52EC748}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{344D7B76-7B66-437C-BF37-50A952323D62} = {C1698DDC-827B-4CCB-882B-DB76A52EC748}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F18C115F-A05C-4EA1-8152-0E012BFE3536}

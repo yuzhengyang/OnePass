@@ -15,5 +15,10 @@ namespace OnePass.Views.AddPassViews
         {
             InitializeComponent();
         }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
