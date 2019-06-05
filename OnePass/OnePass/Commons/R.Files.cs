@@ -12,9 +12,15 @@ namespace OnePass.Commons
         public static class Files
         {
             public static string App = Application.ExecutablePath;
-            public static string Settings = DirTool.Combine(Paths.App, "Settings.ini");
-            public static string Data = DirTool.Combine(Paths.App, "OnePassData.ops");
-            public static string Cache = DirTool.Combine(Paths.App, "OnePassData.ops.cache");
+
+            public static string GetUserDataFile(string email)
+            {
+                return DirTool.Combine(Paths.Datas, email, $"{email}.opds");
+            }
+            public static string GetUserDataCacheFile(string email)
+            {
+                return DirTool.Combine(Paths.Datas, email, $"{email}.opds.cache");
+            }
         }
     }
 }

@@ -39,11 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PassModels\PassAppEntity.cs" />
-    <Compile Include="PassModels\PassItemEntity.cs" />
-    <Compile Include="PassModels\PassFolderEntity.cs" />
-    <Compile Include="PassTypeModels\PassBaseTypeEntity.cs" />
-    <Compile Include="PassTypeModels\PassCreditCardTypeEntity.cs" />
+    <Compile Include="StorageModels\DataEntity.cs" />
+    <Compile Include="PassModels\PassChildModels\PassRdpEntity.cs" />
+    <Compile Include="PassModels\PassEntity.cs" />
+    <Compile Include="PassModels\PassChildModels\PassCreditCardEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserModels\UserEntity.cs" />
   </ItemGroup>

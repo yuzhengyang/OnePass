@@ -25,11 +25,11 @@ namespace OnePass.Views.MainViews
             if (Str.Ok(TbxEmail.Text, TbxPassword.Text))
             {
                 R.User.Email = TbxEmail.Text;
-                R.User.Password = TbxPassword.Text;
-                R.User.PasswordCode = AesTool.Encrypt(MD5Tool.Encrypt(R.User.Password), R.User.Email);
+                R.User.Passcode = ;
 
                 IniTool.Set(R.Files.Settings, "User", "Email", R.User.Email);
                 IniTool.Set(R.Files.Settings, "User", "PasswordCode", R.User.PasswordCode);
+                R.Toast.Show("创建账号",$"已为您创建账号：{R.User.Email}，请妥善保存密码，丢失无法恢复。");
                 Close();
             }
         }

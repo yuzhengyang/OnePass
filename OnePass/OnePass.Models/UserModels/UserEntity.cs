@@ -7,8 +7,13 @@ namespace OnePass.Models.UserModels
 {
     public class UserEntity
     {
+        /// <summary>
+        /// 邮箱地址
+        /// </summary>
         public string Email { get; set; }
-        public string Password { get; set; }
-        public string  PasswordCode { get; set; }
+        /// <summary>
+        /// 加密后的密码
+        /// </summary>
+        public string  Passcode { get; set; }
     }
 }

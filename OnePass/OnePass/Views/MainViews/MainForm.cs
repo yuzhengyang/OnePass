@@ -34,15 +34,7 @@ namespace OnePass.Views.MainViews
             }
             else
             {
-                new InitForm().ShowDialog();
-                if (Str.Ok(R.User.Email, R.User.Password, R.User.PasswordCode))
-                {
-                    Close();
-                }
-                else
-                {
-                    Exit();
-                }
+                Exit();
             }
         }
         public void Exit()

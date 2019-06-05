@@ -34,6 +34,7 @@
             this.TbxPassword = new System.Windows.Forms.TextBox();
             this.TbxEmail = new System.Windows.Forms.TextBox();
             this.BtnConfirm = new System.Windows.Forms.Button();
+            this.LbCreateAccount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -90,11 +91,25 @@
             this.BtnConfirm.UseVisualStyleBackColor = true;
             this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
+            // LbCreateAccount
+            // 
+            this.LbCreateAccount.AutoSize = true;
+            this.LbCreateAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LbCreateAccount.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LbCreateAccount.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LbCreateAccount.Location = new System.Drawing.Point(39, 174);
+            this.LbCreateAccount.Name = "LbCreateAccount";
+            this.LbCreateAccount.Size = new System.Drawing.Size(53, 12);
+            this.LbCreateAccount.TabIndex = 12;
+            this.LbCreateAccount.Text = "创建账号";
+            this.LbCreateAccount.Click += new System.EventHandler(this.LbCreateAccount_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 211);
+            this.Controls.Add(this.LbCreateAccount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -102,6 +117,7 @@
             this.Controls.Add(this.TbxEmail);
             this.Controls.Add(this.BtnConfirm);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,5 +132,6 @@
         private System.Windows.Forms.TextBox TbxPassword;
         private System.Windows.Forms.TextBox TbxEmail;
         private System.Windows.Forms.Button BtnConfirm;
+        private System.Windows.Forms.Label LbCreateAccount;
     }
 }
