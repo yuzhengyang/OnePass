@@ -14,9 +14,21 @@ namespace OnePass.Modules.DataFileModules
 {
     public static class DataFileHelper
     {
-        public static bool Write()
+        public static bool Create(DataEntity data)
         {
-            DataEntity data = R.Data;
+            if (data != null && data.User != null && Str.Ok(data.User.Email, data.User.Passcode))
+            {
+                string file = R.Files.GetUserDataFile(data.User.Email);
+                string cache = R.Files.GetUserDataCacheFile(data.User.Email);
+                if (!File.Exists(file) && !File.Exists(cache))
+                {
+                    return Write(data);
+                }
+            }
+            return false;
+        }
+        public static bool Write(DataEntity data)
+        {
             if (data != null && data.User != null && Str.Ok(data.User.Email, data.User.Passcode))
             {
                 string s = PassHelper.EnData(data);
@@ -31,13 +43,11 @@ namespace OnePass.Modules.DataFileModules
             }
             return false;
         }
-        public static bool Read()
+        public static DataEntity Read(string email, string passcode)
         {
-            string email = R.Data.User.Email;
-            string passcode = R.Data.User.Passcode;
+            DataEntity result = null;
             if (Str.Ok(email, passcode))
             {
-                DataEntity result = null;
                 string file = R.Files.GetUserDataFile(email);
                 string cache = R.Files.GetUserDataCacheFile(email);
                 string s = TxtTool.Read(file);
@@ -51,13 +61,9 @@ namespace OnePass.Modules.DataFileModules
                     if (d.UpdateTime > d_s.UpdateTime) result = d;
                     else result = d_s;
                 }
-                if (result != null)
-                {
-                    R.Data = result;
-                    return true;
-                }
+                if (result != null) R.Data = result;
             }
-            return false;
+            return result;
         }
     }
 }

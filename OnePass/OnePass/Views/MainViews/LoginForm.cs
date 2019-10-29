@@ -3,6 +3,7 @@ using Azylee.Core.DataUtils.StringUtils;
 using Azylee.Core.IOUtils.TxtUtils;
 using OnePass.Commons;
 using OnePass.Models.UserModels;
+using OnePass.Modules.PassModules;
 using OnePass.Modules.UserModules;
 using System;
 using System.Collections.Generic;
@@ -24,13 +25,15 @@ namespace OnePass.Views.MainViews
 
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
-            R.User.Email = TbxEmail.Text;
-            R.User.Passcode = TbxPassword.Text;
-            if (Str.Ok(R.User.Email, R.User.Passcode))
+            string email = TbxEmail.Text;
+            string password = TbxPassword.Text;
+            if (Str.Ok(email, password))
             {
-                R.User.Passcode = AesTool.Encrypt(MD5Tool.Encrypt(R.User.Passcode), R.User.Email);
-                if (UserHelper.Login(R.User.Email, R.User.Passcode))
+                string passcode = PassHelper.EnPasscode(email, password);
+                if (UserHelper.Login(email, passcode))
                 {
+                    R.Data.User.Email = email;
+                    R.Data.User.Passcode = passcode;
                     R.Toast.Show("登录", "登陆成功");
                     Close();
                 }

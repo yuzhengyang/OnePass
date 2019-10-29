@@ -2,6 +2,7 @@
 using Azylee.Core.DataUtils.StringUtils;
 using Azylee.Core.IOUtils.TxtUtils;
 using OnePass.Commons;
+using OnePass.Modules.UserModules;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,15 +23,20 @@ namespace OnePass.Views.MainViews
 
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
-            if (Str.Ok(TbxEmail.Text, TbxPassword.Text))
+            string email = TbxEmail.Text;
+            string password = TbxPassword.Text;
+            if (Str.Ok(email, password))
             {
-                R.User.Email = TbxEmail.Text;
-                R.User.Passcode = ;
-
-                IniTool.Set(R.Files.Settings, "User", "Email", R.User.Email);
-                IniTool.Set(R.Files.Settings, "User", "PasswordCode", R.User.PasswordCode);
-                R.Toast.Show("创建账号",$"已为您创建账号：{R.User.Email}，请妥善保存密码，丢失无法恢复。");
-                Close();
+                bool f1 = UserHelper.Create(email, password);
+                if (f1)
+                {
+                    R.Toast.Show("创建账号", $"已为您创建账号：{email}，请妥善保存密码，丢失无法恢复。");
+                    Close();
+                }
+                else
+                {
+                    R.Toast.Show("创建账号", $"创建账号：{email}失败。", 'e');
+                }
             }
         }
     }

@@ -31,8 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.SsMain = new System.Windows.Forms.StatusStrip();
             this.CmsMain = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.打开主界面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.锁定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MsMain = new System.Windows.Forms.MenuStrip();
             this.开始ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.切换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.备份ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.退出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.发送反馈ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -46,19 +55,20 @@
             this.PNType = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.NiMain = new System.Windows.Forms.NotifyIcon(this.components);
-            this.打开主界面ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.锁定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.工具ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.切换ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.备份ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.LbRdp = new System.Windows.Forms.Label();
+            this.DgvPassList = new System.Windows.Forms.DataGridView();
+            this.DgvPassListDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnCopyPassword = new System.Windows.Forms.Button();
+            this.BtnCopyAccount = new System.Windows.Forms.Button();
+            this.LbAccount = new System.Windows.Forms.Label();
+            this.BtnAddPass = new System.Windows.Forms.Button();
             this.CmsMain.SuspendLayout();
             this.MsMain.SuspendLayout();
             this.PNMain.SuspendLayout();
+            this.PNDetail.SuspendLayout();
+            this.PNItem.SuspendLayout();
             this.PNType.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPassList)).BeginInit();
             this.SuspendLayout();
             // 
             // SsMain
@@ -78,6 +88,29 @@
             this.退出ToolStripMenuItem});
             this.CmsMain.Name = "contextMenuStrip1";
             this.CmsMain.Size = new System.Drawing.Size(113, 76);
+            // 
+            // 打开主界面ToolStripMenuItem
+            // 
+            this.打开主界面ToolStripMenuItem.Name = "打开主界面ToolStripMenuItem";
+            this.打开主界面ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.打开主界面ToolStripMenuItem.Text = "主界面";
+            // 
+            // 锁定ToolStripMenuItem
+            // 
+            this.锁定ToolStripMenuItem.Name = "锁定ToolStripMenuItem";
+            this.锁定ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.锁定ToolStripMenuItem.Text = "锁定";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(109, 6);
+            // 
+            // 退出ToolStripMenuItem
+            // 
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.退出ToolStripMenuItem.Text = "退出";
             // 
             // MsMain
             // 
@@ -101,6 +134,36 @@
             this.开始ToolStripMenuItem.Name = "开始ToolStripMenuItem";
             this.开始ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.开始ToolStripMenuItem.Text = "开始";
+            // 
+            // 登录ToolStripMenuItem
+            // 
+            this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
+            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.登录ToolStripMenuItem.Text = "登录";
+            // 
+            // 切换ToolStripMenuItem
+            // 
+            this.切换ToolStripMenuItem.Name = "切换ToolStripMenuItem";
+            this.切换ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.切换ToolStripMenuItem.Text = "切换";
+            // 
+            // 备份ToolStripMenuItem
+            // 
+            this.备份ToolStripMenuItem.Name = "备份ToolStripMenuItem";
+            this.备份ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.备份ToolStripMenuItem.Text = "备份";
+            // 
+            // 退出ToolStripMenuItem1
+            // 
+            this.退出ToolStripMenuItem1.Name = "退出ToolStripMenuItem1";
+            this.退出ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem1.Text = "退出";
+            // 
+            // 工具ToolStripMenuItem
+            // 
+            this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
+            this.工具ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.工具ToolStripMenuItem.Text = "工具";
             // 
             // 帮助ToolStripMenuItem
             // 
@@ -163,6 +226,10 @@
             // PNDetail
             // 
             this.PNDetail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.PNDetail.Controls.Add(this.BtnAddPass);
+            this.PNDetail.Controls.Add(this.LbAccount);
+            this.PNDetail.Controls.Add(this.BtnCopyAccount);
+            this.PNDetail.Controls.Add(this.BtnCopyPassword);
             this.PNDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PNDetail.Location = new System.Drawing.Point(340, 0);
             this.PNDetail.Name = "PNDetail";
@@ -172,15 +239,18 @@
             // PNItem
             // 
             this.PNItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.PNItem.Controls.Add(this.DgvPassList);
             this.PNItem.Dock = System.Windows.Forms.DockStyle.Left;
             this.PNItem.Location = new System.Drawing.Point(120, 0);
             this.PNItem.Name = "PNItem";
+            this.PNItem.Padding = new System.Windows.Forms.Padding(10);
             this.PNItem.Size = new System.Drawing.Size(220, 350);
             this.PNItem.TabIndex = 1;
             // 
             // PNType
             // 
             this.PNType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(69)))), ((int)(((byte)(74)))));
+            this.PNType.Controls.Add(this.LbRdp);
             this.PNType.Controls.Add(this.label1);
             this.PNType.Dock = System.Windows.Forms.DockStyle.Left;
             this.PNType.Location = new System.Drawing.Point(0, 0);
@@ -193,7 +263,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 16);
+            this.label1.Size = new System.Drawing.Size(110, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "全部";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -204,58 +274,74 @@
             this.NiMain.Text = "notifyIcon1";
             this.NiMain.Visible = true;
             // 
-            // 打开主界面ToolStripMenuItem
+            // LbRdp
             // 
-            this.打开主界面ToolStripMenuItem.Name = "打开主界面ToolStripMenuItem";
-            this.打开主界面ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.打开主界面ToolStripMenuItem.Text = "主界面";
+            this.LbRdp.ForeColor = System.Drawing.Color.White;
+            this.LbRdp.Location = new System.Drawing.Point(4, 35);
+            this.LbRdp.Name = "LbRdp";
+            this.LbRdp.Size = new System.Drawing.Size(110, 16);
+            this.LbRdp.TabIndex = 1;
+            this.LbRdp.Text = "远程桌面";
+            this.LbRdp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // 锁定ToolStripMenuItem
+            // DgvPassList
             // 
-            this.锁定ToolStripMenuItem.Name = "锁定ToolStripMenuItem";
-            this.锁定ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.锁定ToolStripMenuItem.Text = "锁定";
+            this.DgvPassList.AllowUserToAddRows = false;
+            this.DgvPassList.AllowUserToDeleteRows = false;
+            this.DgvPassList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvPassList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPassList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvPassListDesc});
+            this.DgvPassList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvPassList.Location = new System.Drawing.Point(10, 10);
+            this.DgvPassList.Name = "DgvPassList";
+            this.DgvPassList.ReadOnly = true;
+            this.DgvPassList.RowHeadersVisible = false;
+            this.DgvPassList.RowTemplate.Height = 23;
+            this.DgvPassList.Size = new System.Drawing.Size(200, 330);
+            this.DgvPassList.TabIndex = 0;
             // 
-            // 退出ToolStripMenuItem
+            // DgvPassListDesc
             // 
-            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
-            this.退出ToolStripMenuItem.Text = "退出";
+            this.DgvPassListDesc.HeaderText = "描述";
+            this.DgvPassListDesc.Name = "DgvPassListDesc";
+            this.DgvPassListDesc.ReadOnly = true;
             // 
-            // toolStripSeparator3
+            // BtnCopyPassword
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(109, 6);
+            this.BtnCopyPassword.Location = new System.Drawing.Point(87, 10);
+            this.BtnCopyPassword.Name = "BtnCopyPassword";
+            this.BtnCopyPassword.Size = new System.Drawing.Size(75, 23);
+            this.BtnCopyPassword.TabIndex = 0;
+            this.BtnCopyPassword.Text = "复制密码";
+            this.BtnCopyPassword.UseVisualStyleBackColor = true;
             // 
-            // 工具ToolStripMenuItem
+            // BtnCopyAccount
             // 
-            this.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem";
-            this.工具ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.工具ToolStripMenuItem.Text = "工具";
+            this.BtnCopyAccount.Location = new System.Drawing.Point(6, 10);
+            this.BtnCopyAccount.Name = "BtnCopyAccount";
+            this.BtnCopyAccount.Size = new System.Drawing.Size(75, 23);
+            this.BtnCopyAccount.TabIndex = 1;
+            this.BtnCopyAccount.Text = "复制账号";
+            this.BtnCopyAccount.UseVisualStyleBackColor = true;
             // 
-            // 登录ToolStripMenuItem
+            // LbAccount
             // 
-            this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
-            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.登录ToolStripMenuItem.Text = "登录";
+            this.LbAccount.AutoSize = true;
+            this.LbAccount.Location = new System.Drawing.Point(7, 54);
+            this.LbAccount.Name = "LbAccount";
+            this.LbAccount.Size = new System.Drawing.Size(65, 12);
+            this.LbAccount.TabIndex = 2;
+            this.LbAccount.Text = "账号：账号";
             // 
-            // 切换ToolStripMenuItem
+            // BtnAddPass
             // 
-            this.切换ToolStripMenuItem.Name = "切换ToolStripMenuItem";
-            this.切换ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.切换ToolStripMenuItem.Text = "切换";
-            // 
-            // 备份ToolStripMenuItem
-            // 
-            this.备份ToolStripMenuItem.Name = "备份ToolStripMenuItem";
-            this.备份ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.备份ToolStripMenuItem.Text = "备份";
-            // 
-            // 退出ToolStripMenuItem1
-            // 
-            this.退出ToolStripMenuItem1.Name = "退出ToolStripMenuItem1";
-            this.退出ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.退出ToolStripMenuItem1.Text = "退出";
+            this.BtnAddPass.Location = new System.Drawing.Point(277, 10);
+            this.BtnAddPass.Name = "BtnAddPass";
+            this.BtnAddPass.Size = new System.Drawing.Size(75, 23);
+            this.BtnAddPass.TabIndex = 3;
+            this.BtnAddPass.Text = "添加密码";
+            this.BtnAddPass.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -277,7 +363,11 @@
             this.MsMain.ResumeLayout(false);
             this.MsMain.PerformLayout();
             this.PNMain.ResumeLayout(false);
+            this.PNDetail.ResumeLayout(false);
+            this.PNDetail.PerformLayout();
+            this.PNItem.ResumeLayout(false);
             this.PNType.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPassList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,5 +401,12 @@
         private System.Windows.Forms.ToolStripMenuItem 备份ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 工具ToolStripMenuItem;
+        private System.Windows.Forms.Label LbRdp;
+        private System.Windows.Forms.DataGridView DgvPassList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DgvPassListDesc;
+        private System.Windows.Forms.Button BtnCopyAccount;
+        private System.Windows.Forms.Button BtnCopyPassword;
+        private System.Windows.Forms.Label LbAccount;
+        private System.Windows.Forms.Button BtnAddPass;
     }
 }

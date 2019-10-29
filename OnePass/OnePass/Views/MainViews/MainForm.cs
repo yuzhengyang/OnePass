@@ -2,6 +2,7 @@
 using Azylee.Core.DataUtils.StringUtils;
 using Azylee.Core.IOUtils.TxtUtils;
 using OnePass.Commons;
+using OnePass.Modules.UserModules;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,13 +25,9 @@ namespace OnePass.Views.MainViews
         {
             new LoginForm().ShowDialog();
 
-            R.User.Email = IniTool.GetString(R.Files.Settings, "User", "Email", "");
-            R.User.PasswordCode = IniTool.GetString(R.Files.Settings, "User", "PasswordCode", "");
-            if (Str.Ok(R.User.Email, R.User.PasswordCode)) R.User.Password = AesTool.Decrypt(R.User.PasswordCode, R.User.Email);
-
-            if (Str.Ok(R.User.Email, R.User.Password, R.User.PasswordCode))
+            if (UserHelper.IsLogin(R.Data))
             {
-
+                Text = $"OnePass - {R.Data.User.Email}";
             }
             else
             {

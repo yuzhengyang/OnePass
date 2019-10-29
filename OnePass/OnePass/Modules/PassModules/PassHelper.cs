@@ -20,12 +20,26 @@ namespace OnePass.Modules.PassModules
         }
         public static string EnData(DataEntity data)
         {
-            return Json.Object2String(data);
+            string s = "";
+            try
+            {
+                s = Json.Object2String(data);
+                s = AesTool.Encrypt(s, data.User.Email);
+                s = AesTool.Encrypt(s, data.User.Passcode);
+            }
+            catch { }
+            return s;
         }
         public static DataEntity DeData(string s, string email, string passcode)
         {
             DataEntity result = null;
-            result = Json.String2Object<DataEntity>(s);
+            try
+            {
+                string ds = AesTool.Decrypt(s, passcode);
+                ds = AesTool.Decrypt(ds, email);
+                result = Json.String2Object<DataEntity>(ds);
+            }
+            catch { }
             return result;
         }
     }
